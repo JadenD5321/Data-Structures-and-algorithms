@@ -59,7 +59,7 @@ class BSTNode:
         if self.right is not None:
             yield from self.right.post_order()
         yield self.key
-
+# Yield is a kind of generator function.
 
 # This technique is slow. We have to queue up the ENTIRE tree before we start
 # returning nodes. See above BSTNode.in_order() for an example that yields
