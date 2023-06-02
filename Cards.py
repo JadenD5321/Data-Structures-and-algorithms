@@ -73,11 +73,6 @@ class Hand:
     def __repr__(self) -> str:
         return f"{self.cards}"
 
-
-class CardNotFound(Exception):
-    pass
-
-
 class TestCard(unittest.TestCase):
 
     def test_init(self):
