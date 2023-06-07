@@ -20,7 +20,8 @@ class BSTNode:
         """
         if self.left is not None:
             yield from self.left.in_order()   # recursively go left
-        yield self.key                                              # return this key
+        yield self.key  # if the generator function is not within the key
+        # return this key
         if self.right is not None:
             yield from self.right.in_order()  # recursively go right
 
@@ -71,7 +72,7 @@ class BSTNode_Iterator:
         self.counter = 0
 
     # in_order traversal/queueing
-    def in_order(self, node):
+    def in_order(self,node):
         if node.left is not None:
             self.in_order(node.left)
         self.queue.append(node)
